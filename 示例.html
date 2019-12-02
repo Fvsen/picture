@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <style>
+		body,p{margin: 0;}
+		h2{margin: 0;font-size:100%;}
+		ul{margin: 0;padding: 0;list-style: none;}  
+		input{margin: 0;width: 0;} 
+		a{text-decoration: none;color:inherit;}
+		.box{width: 572px;border: 1px solid #999;overflow: hidden;}
+		.nav{margin-left: -1px;font: 14px "微软雅黑";overflow: hidden;background-color: #f1f1f1;}
+		.navI{float: left;width: 33.333%;box-sizing: border-box;}
+		.navI-tit{display:block;line-height: 40px;text-align: center;cursor: pointer;border-left: 1px solid #cecece;border-bottom: 1px solid #cecece;}
+		.navI-txt{position:relative;width: 572px;height:200px;text-indent:2em;line-height: 2;background:#fff;}
+		.ml1{margin-left: -100%;}
+		.ml2{margin-left: -200%;}
+		/*重点代码*/
+		.navI-radio{display:none;}
+		.navI-radio:checked + .navI-tit{background:#fff;border-bottom:none;}
+		.navI-radio:checked ~ .navI-txt{z-index:1;}
+    </style>
+</head>
+<body>
+	
+	<div class="box">
+    <ul class="nav">
+        <li class="navI">
+            <input class="navI-radio" name="nav" type="radio" id="kc" checked>
+            <label class="navI-tit" for="kc">主页</label>            
+            <p class="navI-txt">主页内容</p>
+        </li>
+        <li class="navI">
+            <input class="navI-radio" name="nav" type="radio" id="xx">
+            <label class="navI-tit" for="xx">商品</label>            
+            <p class="navI-txt ml1">商品列</p>
+        </li>
+        <li class="navI">
+            <input class="navI-radio" name="nav" type="radio" id="jn">
+            <label class="navI-tit" for="jn">个人中心</label>            
+            <p class="navI-txt ml2">订单、个人信息、消费记录等</p>
+        </li>
+    </ul>   
+</div>
+	
+</body>
+</html>
